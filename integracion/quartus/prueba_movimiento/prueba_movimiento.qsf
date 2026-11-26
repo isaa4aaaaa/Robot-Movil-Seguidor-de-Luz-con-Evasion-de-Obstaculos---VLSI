@@ -1,0 +1,44 @@
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY prueba_movimiento
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_1993
+set_global_assignment -name VHDL_FILE ../../../componentes/pwm/vhdl/pwm_doble_8bits.vhd
+set_global_assignment -name VHDL_FILE ../../../componentes/movimiento/vhdl/seleccionar_orden.vhd
+set_global_assignment -name VHDL_FILE ../../../componentes/movimiento/vhdl/movimiento.vhd
+set_global_assignment -name BDF_FILE prueba_movimiento.bdf
+set_global_assignment -name SDC_FILE prueba_movimiento.sdc
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_location_assignment PIN_P11 -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_location_assignment PIN_B8 -to key0_n
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to key0_n
+set_location_assignment PIN_C10 -to sw[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sw[0]
+set_location_assignment PIN_C11 -to sw[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sw[1]
+set_location_assignment PIN_D12 -to sw[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sw[2]
+set_location_assignment PIN_AA14 -to ain1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ain1
+set_location_assignment PIN_W13 -to ain2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ain2
+set_location_assignment PIN_W12 -to pwm_a
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_a
+set_location_assignment PIN_AB13 -to bin1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to bin1
+set_location_assignment PIN_AB12 -to bin2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to bin2
+set_location_assignment PIN_Y11 -to pwm_b
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_b
+set_location_assignment PIN_AB11 -to stby
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to stby
+
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
