@@ -1,0 +1,79 @@
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY prueba_navegacion
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_1993
+set_global_assignment -name BDF_FILE prueba_navegacion.bdf
+set_global_assignment -name SDC_FILE prueba_navegacion.sdc
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name VHDL_FILE ../../../componentes/infraestructura/vhdl/botones_navegacion.vhd
+set_global_assignment -name VHDL_FILE ../../../componentes/sensores_luz/vhdl/lectura_luz.vhd
+set_global_assignment -name VHDL_FILE ../../../componentes/sensores_distancia/vhdl/medir_hcsr04.vhd
+set_global_assignment -name VHDL_FILE ../../../componentes/sensores_distancia/vhdl/cuatro_hcsr04.vhd
+set_global_assignment -name VHDL_FILE ../../../componentes/fsm/vhdl/navegacion_basica.vhd
+set_global_assignment -name VHDL_FILE ../../../componentes/movimiento/vhdl/movimiento.vhd
+set_global_assignment -name VHDL_FILE ../../../componentes/pwm/vhdl/pwm_doble_8bits.vhd
+set_location_assignment PIN_P11 -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_location_assignment PIN_B8 -to key0_n
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to key0_n
+set_location_assignment PIN_A7 -to key1_n
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to key1_n
+set_location_assignment PIN_AA14 -to ain1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ain1
+set_location_assignment PIN_W13 -to ain2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ain2
+set_location_assignment PIN_W12 -to pwm_a
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_a
+set_location_assignment PIN_AB13 -to bin1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to bin1
+set_location_assignment PIN_AB12 -to bin2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to bin2
+set_location_assignment PIN_Y11 -to pwm_b
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_b
+set_location_assignment PIN_AB11 -to stby
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to stby
+set_location_assignment PIN_V10 -to ldr_d0[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ldr_d0[0]
+set_location_assignment PIN_W10 -to ldr_d0[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ldr_d0[1]
+set_location_assignment PIN_V9 -to ldr_d0[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ldr_d0[2]
+set_location_assignment PIN_W9 -to ldr_d0[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ldr_d0[3]
+set_location_assignment PIN_V8 -to trig[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to trig[0]
+set_location_assignment PIN_V7 -to trig[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to trig[1]
+set_location_assignment PIN_W6 -to trig[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to trig[2]
+set_location_assignment PIN_W5 -to trig[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to trig[3]
+set_location_assignment PIN_W8 -to echo[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to echo[0]
+set_location_assignment PIN_W7 -to echo[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to echo[1]
+set_location_assignment PIN_V5 -to echo[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to echo[2]
+set_location_assignment PIN_AA15 -to echo[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to echo[3]
+set_location_assignment PIN_A8 -to leds[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[0]
+set_location_assignment PIN_A9 -to leds[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[1]
+set_location_assignment PIN_A10 -to leds[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[2]
+set_location_assignment PIN_B10 -to leds[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[3]
+set_location_assignment PIN_D13 -to leds[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[4]
+set_location_assignment PIN_C13 -to leds[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[5]
+
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
